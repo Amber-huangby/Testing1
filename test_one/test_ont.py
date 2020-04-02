@@ -1,6 +1,7 @@
 import pytest
-
 from test_one.num_js import Num_js
+import time
+from selenium import webdriver
 
 
 def test_1():
@@ -48,6 +49,18 @@ def test_4(request):
 
 def test5(test_4):
     print("sdjfshd" + str(test_4))
+
+
+def test_1111():
+    driver = webdriver.Chrome()
+    driver.get("https://www.baidu.com/")
+    time.sleep(10)
+
+def test_one():
+    option = webdriver.ChromeOptions()
+    option.debugger_address = "127.0.0.1:9222"
+    self.driver = webdriver.Chrome(options=option)
+    self.driver.find_element(By.XPATH, '//*[@id="u"]/a[1]')
 
 
 if __name__ == '__main__':
